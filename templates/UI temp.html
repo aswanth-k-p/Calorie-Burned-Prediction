@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Quality Prediction</title>
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+        
+        hr {
+            margin-bottom: 1.5rem !important;
+            margin-top: 1.5rem !important;
+        }
+
+        .mt-15 {
+            margin-top: 15px;
+        }
+
+        .mt-40 {
+            margin-top: 40px;
+        }
+
+        .img-fluid {
+            height: 70vh;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .output-values {
+            margin-top: 11%;
+        }
+
+        .list-group {
+            text-align: left;
+            margin-top: 3rem;
+            display: none;
+        }
+
+        .list-group a {
+            text-decoration: none;
+            color: #0dcaf0;
+            padding: 0.2rem;
+        }
+
+        .form-floating label {
+            left: 13px;
+        }
+    </style>
+</head>
+
+
+<body class="bg-dark" background="D:\Downloads\Mini Project\waternew.jpg">
+    
+
+    <div class="container mt-15 text-center">
+        <div class="row">
+            <div class="col-md-12 text-center">
+
+                <div class="card">
+                    <h5 class="card-header bg-info text-white">Water Quality Prediction</h5>
+                    <div class="card-body row">
+
+
+                        <div class="col-md-12 text-center">
+                            <form action="" class="row" id="data-upload" enctype="multipart/form-data" method="post">
+
+
+                                <!------->
+
+                                <div class="col-md-4 ml-3 form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingInput" placeholder="Enter"
+                                        onkeypress="return checkDecimal(this)">
+                                    <label for="floatingInput">pH </label>
+                                </div>
+
+                                <div class="col-md-4 ml-3 form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingInput" placeholder="Enter"
+                                        onkeypress="return checkDecimal(this)">
+                                    <label for="floatingInput">Hardness </label>
+                                </div>
+
+                                <div class="col-md-4 ml-3 form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingInput" placeholder="Enter"
+                                        onkeypress="return checkDecimal(this)">
+                                    <label for="floatingInput">Solids </label>
+                                </div>
+
+                                <!------->
+
+
+                                <hr>
+
+                                <!------->
+
+
+                                <div class="col-md-4 ml-3 form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingInput" placeholder="Enter"
+                                        onkeypress="return checkDecimal(this)">
+                                    <label for="floatingInput">Chloramines </label>
+                                </div>
+
+                                <div class="col-md-4 ml-3 form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingInput" placeholder="Enter"
+                                        onkeypress="return checkDecimal(this)">
+                                    <label for="floatingInput">Sulfate </label>
+                                </div>
+
+                                <div class="col-md-4 ml-3 form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingInput" placeholder="Enter"
+                                        onkeypress="return checkDecimal(this)">
+                                    <label for="floatingInput">Conductivity </label>
+                                </div>
+
+                                <!------->
+
+                                <hr>
+
+                                <!------->
+
+                                <div class="col-md-4 ml-3 form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingInput" placeholder="Enter"
+                                        onkeypress="return checkDecimal(this)">
+                                    <label for="floatingInput">Organic Carbon </label>
+                                </div>
+
+                                <div class="col-md-4 ml-3 form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingInput" placeholder="Enter"
+                                        onkeypress="return checkDecimal(this)">
+                                    <label for="floatingInput">Trihalomethanes </label>
+                                </div>
+
+                                <div class="col-md-4 ml-3 form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingInput" placeholder="Enter"
+                                        onkeypress="return checkDecimal(this)">
+                                    <label for="floatingInput">Turbidity </label>
+                                </div>
+                                <!------->
+
+                                <hr>
+
+                                <div class="col-md-12">
+                                    <button class="btn btn-sm fw-bold text-dark btn-info" id="data-upload-btn"
+                                        type="submit">Predict Quality  
+                                    
+                                        <i class="fa fa-tint" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+
+                                <hr>
+
+                            </form>
+
+
+
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+<script>
+    function checkDecimal(element) {
+        let value = element.value;
+        var rgx = /^[0-9]*\.?[0-9]*$/;
+
+        if (value.match(rgx))
+            return true
+
+
+        return false;
+    }
+</script>
+
+
+</html>
